@@ -1,1 +1,165 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
+/* .menu li{
+    display: inline;
+}
+.submenu {
+    display: none;
+} */
+
+/* Default small viewport */
+.your-products li{
+    display: flex;
+    list-style-type: none;
+}
+body{
+    --pad-gap: 1em;
+    --default-font-size: 16px;
+    font-size: var(--default-font-size);
+}
+.products, .page-header, .page-footer {
+    padding: 0 var(--pad-gap);
+}
+.page-header{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "logo . your-products nav-toggle"
+    "search search search search"
+    "navigation navigation navigation navigation";
+}
+.logo { 
+    grid-area: logo; 
+}
+.nav-toggle { 
+    grid-area: nav-toggle; 
+}
+.search { 
+    grid-area: search; 
+}
+.navigation { 
+    grid-area: navigation; 
+}
+.your-products { 
+    grid-area: your-products; 
+}
+.pagination{
+    text-align: center;
+}
+.pages {
+    padding: 0 var(--pad-gap);
+    display: flex;
+    justify-content: center;
+}
+.social, .legal{ 
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.pages > li, .social > li, .legal > li {
+    list-style-type: none;
+}
+.pages > li{
+    margin: 0 calc(var(--pad-gap)/2);
+}
+.copyright{
+    text-align: right;
+}
+
+.filter-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.filter-list{
+    list-style-type: none;
+}
+.filter-ratings{
+    display: block;
+}
+.product{
+    max-width: 100%;
+    border: 2px solid black;
+    border-radius: 12px;
+    display: inline-block;
+    margin: var(--pad-gap);
+}
+.product img{
+    max-width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    /* border-radius: 12px; */
+}
+/* Medium viewport */
+/* @media only screen and (min-width: 40em){
+    .products{
+        display: grid;
+        grid-template-columns: 15em auto;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: var(--pad-gap);
+        grid-template-areas:
+        "heading heading"
+        "pagination pagination";
+    }
+    .heading { 
+        grid-area: heading; 
+    }
+    .pagination { 
+        grid-area: pagination; 
+    }
+} */
+
+/* Large viewport */
+@media only screen and (min-width: 70em){
+    .products {
+        display: grid;
+        grid-template-columns: 15em auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "heading heading"
+        "filters results"
+        "pagination pagination";
+    }
+    .heading { 
+        grid-area: heading; 
+    }
+    .pagination { 
+        grid-area: pagination; 
+    }
+    .filters {
+        grid-area: filters;
+    }
+    .results {
+        grid-area: results;
+    }
+    .page-header{
+        grid-template-columns: auto 1fr auto auto auto;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "logo . search navigation your-products";
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .menu, .menu > li, .submenu{
+        display: flex;
+        list-style-type: none;
+    }
+    /* .products{
+        display: block;
+    } */
+    /* .filter-options{
+        display: flex;
+        justify-content: space-between;
+    } */
+    .product{
+        /* height: 200px; */
+        width: 400px;
+    }
+    .social, .legal, .copyright{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
