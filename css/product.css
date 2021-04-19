@@ -1,0 +1,28 @@
+/* .single-product {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    height: 100%;
+    margin: var(--pad-gap);
+} */
+.single-product {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    background-color: white;
+    /* height: 100%; */
+    margin: var(--pad-gap);
+    padding: var(--pad-gap);
+  }
+  
+  .photo { grid-area: 1 / 1 / 4 / 2; }
+  
+  .name { grid-area: 1 / 2 / 2 / 3; }
+  
+  .desc { grid-area: 2 / 2 / 3 / 3; }
+  
+  .button { grid-area: 3 / 2 / 4 / 3; }
+  
+  .thumbnails { grid-area: 3 / 1 / 4 / 2; }
+  
