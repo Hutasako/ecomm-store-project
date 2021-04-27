@@ -1,28 +1,101 @@
 /* .single-product {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    height: 100%;
-    margin: var(--pad-gap);
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  height: 100%;
+  margin: var(--pad-gap);
 } */
-.single-product {
+.single-product img{
+  max-width: 100%;
+}
+.single-product{
+  padding: 1em;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 1em 1em;
+  grid-template-areas:
+    "gallery product-info";
+}
+.product-info{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "name"
+    "desc"
+    "button";
+  grid-area: product-info;
+  /* margin: auto; */
+  padding: 1em;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 80em;
+  /* margin: 0 auto; */
+  gap: 1em 1em;
+  grid-template-areas:
+  "thumbnails bigimg bigimg bigimg";
+}
+.name { grid-area: name; }
+.desc { grid-area: desc; }
+.button { grid-area: button; }
+.thumbnails { 
+  grid-area: thumbnails; 
+}
+.bigimg { 
+  grid-area: bigimg; 
+  grid-column: span 3;
+  height: 100%;
+  width: 100%;
+}
+.thumbnails{
+  padding: 1em;
+  height: 300px;
+  width: 330px;
+  object-fit: cover;
+}
+.thumbs:hover{
+  cursor: pointer;
+}
+.add-cart{
+  border-radius: 12px;
+  width: 50%;
+  margin: 0 auto;
+}
+.page-footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+/* @media only screen and (min-width: 70em){
+  .single-product {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     gap: 0px 0px;
-    background-color: white;
-    /* height: 100%; */
-    margin: var(--pad-gap);
-    padding: var(--pad-gap);
+    grid-template-areas:
+    "photo product-info"
+    "photo product-info"
+    "thumbnails product-info";
   }
-  
-  .photo { grid-area: 1 / 1 / 4 / 2; }
-  
-  .name { grid-area: 1 / 2 / 2 / 3; }
-  
-  .desc { grid-area: 2 / 2 / 3 / 3; }
-  
-  .button { grid-area: 3 / 2 / 4 / 3; }
-  
-  .thumbnails { grid-area: 3 / 1 / 4 / 2; }
-  
+  .photo { grid-area: photo; }
+  .thumbnails { grid-area: thumbnails; }
+  .product-info {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+    "name"
+    "desc"
+    "button";
+    grid-area: product-info;
+  }
+  .name { grid-area: name; }
+  .desc { grid-area: desc; }
+  .button { grid-area: button; }
+} */

@@ -21,8 +21,9 @@ body{
     --default-font-size: 16px;
     font-size: var(--default-font-size);
     --primary-color: rgb(65, 64, 153);
-    background: linear-gradient(#718e88, white);
+    /* background: linear-gradient(#718e88, white); */
     font-family: 'Libre Baskerville', serif;
+    background-color: #f0f0f0;
 }
 .products,.page-footer {
     padding: var(--pad-gap);
@@ -173,6 +174,8 @@ body{
     border-radius: 0 0 12px 12px;
 }
 .page-footer{
+
+  width: 100%;
     background-color: white;
 }
 .social{
