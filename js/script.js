@@ -31,12 +31,18 @@ const products = [
     },
 ]
 
+
+// Print rating in stars
 function getRating(rating){
     const starContainer = document.createElement('dd');
     let stars = `${rating} `;
+
+    // Print filled stars
     for (i = 0;i < rating; i++){
         stars += `<span class="material-icons">star</span>`;
     }
+
+    // Print empty stars if rating < 5
     if (rating < 5){
         let diff = 5 - rating;
         for (i = 0;i < diff; i++){
@@ -46,7 +52,7 @@ function getRating(rating){
     starContainer.innerHTML = stars;
     return stars;
 }
-
+// Print available options for given product
 function getOptions(options){
     if(options){
         return `
