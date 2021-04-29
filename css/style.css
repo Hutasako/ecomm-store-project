@@ -5,7 +5,7 @@
 .submenu {
     display: none;
 } */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* Default small viewport */
 .your-products{
     padding: 0;
@@ -22,7 +22,7 @@ body{
     font-size: var(--default-font-size);
     --primary-color: rgb(65, 64, 153);
     /* background: linear-gradient(#718e88, white); */
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f0f0f0;
 }
 .products,.page-footer {
@@ -85,8 +85,8 @@ body{
 }
 
 .filter-list{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     padding: 0;
 }
 .filter-list{
@@ -96,7 +96,8 @@ body{
     display: block;
 }
 .product{
-    max-width: 100%;
+    /* height: 650px; */
+    /* width: 300px; */
     border: 1px solid grey;
     border-radius: 14px;
     display: inline-block;
@@ -108,7 +109,7 @@ body{
 }
 .product img{
     border-bottom: 1px solid silver;
-    height: 300px;
+    height: auto;
     width: 100%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -125,6 +126,9 @@ body{
 /* .fav-logo{
     height: 150px;
 } */
+.fav-btn.active svg{
+    fill: red;
+}
 .fav-btn svg:hover{
     cursor: pointer;
     fill: red;
@@ -340,6 +344,10 @@ body{
     .product{
         /* height: 200px; */
         width: 400px;
+    }
+    .product img {
+        height: 300px;
+        width: 100%;
     }
     .social, .legal, .copyright{
         width: 50%;
