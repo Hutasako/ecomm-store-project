@@ -14,7 +14,7 @@
   <header class="page-header">
     <a href="index.html" class="logo">
       <!-- Site logo -->
-      <img src="img/logo.png">
+      <!-- <img src="img/logo.png"> -->
     </a>
     
     <!-- Navigation menu and toggle button (non-functional) -->
@@ -23,7 +23,7 @@
     </button>
     <nav aria-label="Primary" class="navigation">
       <ul class="menu">
-        <li><a href="#">Shop</a>
+        <li class="dropdown"><a href="#">Shop</a>
           <ul class="submenu">
             <li><a href="#">Subcategory</a></li>
             <li><a href="#">Subcategory</a></li>
@@ -75,10 +75,10 @@
         <fieldset>
           <legend>Type</legend>
           <ul class="filter-list">
-            <li><input type="checkbox" name="colour" value="Cartridge" id="Cartridge"> <label for="Cartridge">Cartridge</label></li>
-            <li><input type="checkbox" name="colour" value="Gummy" id="Gummy"> <label for="Gummy">Gummy</label></li>
-            <li><input type="checkbox" name="colour" value="Flower" id="Flower"> <label for="Flower">Flower</label></li>
-            <li><input type="checkbox" name="colour" value="Hash" id="Hash"> <label for="Hash">Hash</label></li>
+            <li><input type="radio" name="type" value="Cartridge" id="Cartridge"> <label for="Cartridge">Cartridge</label></li>
+            <li><input type="radio" name="type" value="Gummy" id="Gummy"> <label for="Gummy">Gummy</label></li>
+            <li><input type="radio" name="type" value="Flower" id="Flower"> <label for="Flower">Flower</label></li>
+            <li><input type="radio" name="type" value="Hash" id="Hash"> <label for="Hash">Hash</label></li>
             <!-- <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li> -->
           </ul>
         </fieldset>
@@ -136,223 +136,7 @@
     <section class="results">
       <h2 class="subheading">Results</h2>
       
-      <!-- Product 1 -->
-      <article class="product">
-        <header>
-          <img src="img/pexels-karolina-grabowska-4871304.jpg" alt="Product Image">
-          <button type="button" class="fav-btn active">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0V0z" fill="none"/>
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </button>
-          <div class="pad-content">
-            <h3>RC Jazzberry Pressed Ice</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-            <!-- <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p> -->
-            <dl>
-              <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-            <a href="product.html">see more</a>
-          </div>
-        </header>
-        <form class="product-size pad-content">
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><label><input type="radio" name="size" value="3.5"> 3.5g</label></li>
-              <li><label><input type="radio" name="size" value="14"> 14g</label></li>
-              <li><label><input type="radio" name="size" value="28"> 28g</label></li>
-            </ol>
-          </fieldset>
-        </form>
-        <footer>
-          <button type="button" class="add-cart"> Add to Cart</button>
-        </footer>
-      </article>
-      
-      <!-- Product 2 -->
-      <article class="product">
-        <header>
-          <img src="img/gummy_bears.jpg" alt="Product Image">
-          <button type="button" class="fav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0V0z" fill="none"/>
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </button>
-          <div class="pad-content">
-            <h3>Wana Quick Pineapple Indica Soft Chews</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-            <!-- <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p> -->
-            <dl>
-              <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-            <a href="#">see more</a>
-          </div>
-        </header>
-        <form class="product-size pad-content">
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><label><input type="radio" name="size" value="10g">2x5g</label></li>
-              <li><label><input type="radio" name="size" value="20g"> 4x5g</label></li>
-              <!-- <li><label><input type="radio" name="size" value="xl"> XL</label></li> -->
-            </ol>
-          </fieldset>
-        </form>
-        <footer>
-          <button type="button" class="add-cart">Add to Cart</button>
-        </footer>
-      </article>
-      
-      <!-- Product 3 -->
-      <article class="product">
-        <header>
-          <img src="img/oregano.jpg" alt="Product Image">
-          <button type="button" class="fav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0V0z" fill="none"/>
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </button>
-          <div class="pad-content">
-            <h3>Organnicraft Cherry Punch</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-            <!-- <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p> -->
-            <dl>
-              <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-            <a href="#">see more</a>
-          </div>
-        </header>
-        <form class="product-size pad-content">
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><label><input type="radio" name="size" value="15"> 15g</label></li>
-              <li><label><input type="radio" name="size" value="28g"> 28g</label></li>
-              <!-- <li><label><input type="radio" name="size" value="xl"> XL</label></li> -->
-            </ol>
-          </fieldset>
-        </form>
-        <footer>
-          <button type="button" class="add-cart">Add to Cart</button>
-        </footer>
-      </article>
-      
-      <!-- Product 4 -->
-      <article class="product">
-        <header>
-          <img src="img/shrooms.jpg" alt="Product Image">
-          <button type="button" class="fav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0V0z" fill="none"/>
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </button>
-          <div class="pad-content">
-            <h3>Grower's Choice Indica</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-            <!-- <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p> -->
-            <dl>
-              <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-            <a href="#">see more</a>
-          </div>
-        </header>
-        <form class="product-size pad-content">
-
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><label><input type="radio" name="size" value="3.5"> 3.5g</label></li>
-              <li><label><input type="radio" name="size" value="14"> 14g</label></li>
-              <li><label><input type="radio" name="size" value="28"> 28g</label></li>
-            </ol>
-          </fieldset>
-        </form>
-        <footer>
-          <button type="button" class="add-cart">Add to Cart</button>
-        </footer>
-      </article>
-      
-      <!-- Product 5 -->
-      <article class="product">
-        <header>
-          <img src="img/Fountain-pen.jpg" alt="Product Image">
-          <button type="button" class="fav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0V0z" fill="none"/>
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </button>
-          <div class="pad-content">
-            <h3>Blue Nova Full Spectrum 510 Cartridge</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-            <!-- <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p> -->
-            <dl>
-              <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-            <a href="#">see more</a>
-          </div>
-        </header>
-        <form class="product-size pad-content">
-
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><label><input type="radio" name="size" value="3.5"> 3.5g</label></li>
-              <li><label><input type="radio" name="size" value="14"> 14g</label></li>
-              <li><label><input type="radio" name="size" value="28"> 28g</label></li>
-            </ol>
-          </fieldset>
-        </form>
-        <footer>
-          <button type="button" class="add-cart">Add to Cart</button>
-        </footer>
-      </article>
-      
-      <!-- Product 6 -->
-      <article class="product">
-        <header>
-          <img src="img/hash.jpg" alt="Product Image">
-          <button type="button" class="fav-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0V0z" fill="none"/>
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </button>
-          <div class="pad-content">
-            <h3>BC Organic Skyway SFV OG Kush Hash</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-            <!-- <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p> -->
-            <dl>
-              <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-            <a href="#">see more</a>
-          </div>
-        </header>
-        <form class="product-size pad-content">
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><label><input type="radio" name="size" value="1"> 1g</label></li>
-              <!-- <li><label><input type="radio" name="size" value="14"> 14g</label></li>
-              <li><label><input type="radio" name="size" value="28"> 28g</label></li> -->
-            </ol>
-          </fieldset>
-        </form>
-        <footer>
-          <button type="button" class="add-cart">Add to Cart</button>
-        </footer>
-      </article>
+ 
     </section>
     
     <nav aria-label="Pagination" class="pagination">

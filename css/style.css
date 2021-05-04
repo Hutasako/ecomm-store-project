@@ -178,8 +178,8 @@ body{
     border-radius: 0 0 12px 12px;
 }
 .page-footer{
-
-  width: 100%;
+    
+    width: 100%;
     background-color: white;
 }
 .social{
@@ -285,11 +285,16 @@ body{
     list-style-type: none;
     display: inline-block; 
 }
+
+.type{
+    font-weight: 100;
+    font-style: italic;
+}
 /* Large viewport */
 @media only screen and (min-width: 70em){
     .products {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 20em auto;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
         "heading heading"
@@ -298,11 +303,12 @@ body{
     }
     .heading { 
         grid-area: heading; 
-        background-image: url("/img/pexels-evie-shaffer-2748756.jpg");
+        background-image: url("/img/headerbanner.jpg");
         margin-bottom: var(--pad-gap);
-        height: 250px;
         padding: var(--pad-gap);
         text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         /* vertical-align: ; */
     }
     .heading h1 {
@@ -326,13 +332,15 @@ body{
         grid-template-rows: 1fr;
         gap: 0px 0px;
         grid-template-areas:
-          "logo . search navigation your-products";
+        "logo . search navigation your-products";
     }
     .nav-toggle{
         display: none;
     }
-    .menu, .menu > li, .submenu{
-        display: flex;
+    .menu li{
+        position: relative;
+        float: left;
+        display: block;
     }
     /* .products{
         display: block;
@@ -370,10 +378,10 @@ body{
     .menu > li:nth-child(1), .menu > li:nth-child(2) {
         border: none;
     }
-    .menu > li {
-        border-bottom: 3px solid transparent;
-    }
-    .menu > li:hover{
+    .menu > li > a:hover{
+        color: white;
+        transition: 0.3s;
+        background-color: #718e88;
         border-bottom: 3px solid grey;
     }
     .menu > li{
@@ -395,6 +403,27 @@ body{
     .white {
         width: 1080px;
         background-color: red;
+    }
+    .submenu{
+        position: absolute;
+        margin-top: 1rem;
+        left: 0;
+        padding: 0;
+        background-color: white;
+        display: none;
+        visibility: hidden;
+    }
+    .submenu li{
+        padding: 1em;
+    }
+    .submenu li:hover{
+        background-color: rgb(207, 207, 207);
+        transition: 0.3s;
+        border: none;
+    }
+    .dropdown:hover > .submenu{
+        display: block;
+        visibility: visible;
     }
 }
 .close {
